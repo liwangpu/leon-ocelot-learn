@@ -1,6 +1,19 @@
 {
-  "ReRoutes": [],
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "testadmin.damaozhu.com.cn",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Options", "Delete" ]
+    }
+  ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://api.mybusiness.com"
+    "BaseUrl": "http://api.mybusiness.com"
   }
 }
