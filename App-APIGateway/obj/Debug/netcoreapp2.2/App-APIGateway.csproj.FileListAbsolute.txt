@@ -1,0 +1,14 @@
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\bin\Debug\netcoreapp2.2\App-APIGateway.deps.json
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\bin\Debug\netcoreapp2.2\App-APIGateway.runtimeconfig.json
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\bin\Debug\netcoreapp2.2\App-APIGateway.runtimeconfig.dev.json
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\bin\Debug\netcoreapp2.2\App-APIGateway.dll
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\obj\Debug\netcoreapp2.2\App-APIGateway.csprojAssemblyReference.cache
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\obj\Debug\netcoreapp2.2\App-APIGateway.csproj.CoreCompileInputs.cache
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\obj\Debug\netcoreapp2.2\App-APIGateway.AssemblyInfoInputs.cache
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\obj\Debug\netcoreapp2.2\App-APIGateway.AssemblyInfo.cs
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\obj\Debug\netcoreapp2.2\App-APIGateway.RazorAssemblyInfo.cache
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\obj\Debug\netcoreapp2.2\App-APIGateway.RazorAssemblyInfo.cs
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\bin\Debug\netcoreapp2.2\App-APIGateway.pdb
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\obj\Debug\netcoreapp2.2\App-APIGateway.RazorTargetAssemblyInfo.cache
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\obj\Debug\netcoreapp2.2\App-APIGateway.dll
+D:\Leon\AppCode\tutorials\leon-ocelot-learn\App-APIGateway\obj\Debug\netcoreapp2.2\App-APIGateway.pdb
