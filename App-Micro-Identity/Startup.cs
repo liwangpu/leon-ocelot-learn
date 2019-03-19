@@ -35,28 +35,28 @@ namespace App_Micro_Identity
             services.AddSingleton(Configuration);
 
             #region JwtBearer Setting
-            var jwtSettingsIssuer = Configuration["JwtSettings:Issuer"];
-            var audience = Configuration["JwtSettings:Audience"];
-            var secretKey = Configuration["JwtSettings:SecretKey"];
-            Console.WriteLine("AppSetting=>JwtSettings:Issuer:{0}", jwtSettingsIssuer);
-            Console.WriteLine("AppSetting=>JwtSettings:Audience:{0}", audience);
-            Console.WriteLine("AppSetting=>JwtSettings:SecretKey:{0}", secretKey);
+            //var jwtSettingsIssuer = Configuration["JwtSettings:Issuer"];
+            //var audience = Configuration["JwtSettings:Audience"];
+            //var secretKey = Configuration["JwtSettings:SecretKey"];
+            //Console.WriteLine("AppSetting=>JwtSettings:Issuer:{0}", jwtSettingsIssuer);
+            //Console.WriteLine("AppSetting=>JwtSettings:Audience:{0}", audience);
+            //Console.WriteLine("AppSetting=>JwtSettings:SecretKey:{0}", secretKey);
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            .AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = true,
-                    ValidateAudience = false,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = jwtSettingsIssuer,
-                    ValidAudience = audience,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
-                    ClockSkew = TimeSpan.Zero
-                };
-            });
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //.AddJwtBearer(options =>
+            //{
+            //    options.TokenValidationParameters = new TokenValidationParameters
+            //    {
+            //        ValidateIssuer = true,
+            //        ValidateAudience = false,
+            //        ValidateLifetime = true,
+            //        ValidateIssuerSigningKey = true,
+            //        ValidIssuer = jwtSettingsIssuer,
+            //        ValidAudience = audience,
+            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
+            //        ClockSkew = TimeSpan.Zero
+            //    };
+            //});
             #endregion
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -70,7 +70,7 @@ namespace App_Micro_Identity
                 app.UseDeveloperExceptionPage();
             }
             app.UseCors("AllowAll");
-            app.UseAuthentication();
+            //app.UseAuthentication();
 
             app.UseMvc();
         }

@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
-
+using System;
+using System.Text;
 
 namespace App_APIGateway
 {
@@ -21,6 +24,32 @@ namespace App_APIGateway
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+            #region JwtBearer Setting
+            var jwtSettingsIssuer = Configuration["JwtSettings:Issuer"];
+            var audience = Configuration["JwtSettings:Audience"];
+            var secretKey = Configuration["JwtSettings:SecretKey"];
+            Console.WriteLine("AppSetting=>JwtSettings:Issuer:{0}", jwtSettingsIssuer);
+            Console.WriteLine("AppSetting=>JwtSettings:Audience:{0}", audience);
+            Console.WriteLine("AppSetting=>JwtSettings:SecretKey:{0}", secretKey);
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwtSettingsIssuer,
+                    ValidAudience = audience,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey)),
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
+            #endregion
+
             services.AddOcelot(Configuration);
         }
 

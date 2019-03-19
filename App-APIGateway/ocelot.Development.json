@@ -22,7 +22,11 @@
         }
       ],
       "UpstreamPathTemplate": "/{url}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Options", "Delete" ]
+      "UpstreamHttpMethod": [ "Get", "Post", "Options", "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     }
   ],
   "GlobalConfiguration": {

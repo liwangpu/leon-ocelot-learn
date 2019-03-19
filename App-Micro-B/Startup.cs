@@ -34,7 +34,7 @@ namespace App_Micro_B
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            //app.UseAuthentication();
             app.UseMvc();
         }
     }
