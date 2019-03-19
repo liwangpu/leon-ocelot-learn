@@ -21,7 +21,23 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/{url}",
+      "UpstreamPathTemplate": "/a/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Options", "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/b/{url}",
       "UpstreamHttpMethod": [ "Get", "Post", "Options", "Delete" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
