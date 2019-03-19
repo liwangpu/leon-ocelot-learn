@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace App_Micro_A.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {

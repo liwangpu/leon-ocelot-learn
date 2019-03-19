@@ -1,12 +1,24 @@
 {
   "ReRoutes": [
     {
+      "DownstreamPathTemplate": "/token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/token",
+      "UpstreamHttpMethod": [ "Get", "Post", "Options", "Delete" ]
+    },
+    {
       "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "testadmin.damaozhu.com.cn",
-          "Port": 80
+          "Host": "localhost",
+          "Port": 5002
         }
       ],
       "UpstreamPathTemplate": "/{url}",
